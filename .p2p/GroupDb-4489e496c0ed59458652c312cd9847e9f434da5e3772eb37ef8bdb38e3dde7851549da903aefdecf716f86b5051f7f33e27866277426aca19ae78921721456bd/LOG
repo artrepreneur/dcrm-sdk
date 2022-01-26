@@ -1,0 +1,19 @@
+=============== Jan 23, 2022 (EST) ===============
+23:42:50.027428 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:42:50.089706 db@open opening
+23:42:50.112312 version@stat F·[] S·0B[] Sc·[]
+23:42:50.147988 db@janitor F·2 G·0
+23:42:50.148028 db@open done T·57.895541ms
+23:42:50.148663 db@close closing
+23:42:50.149324 db@close done T·657.541µs
+=============== Jan 24, 2022 (EST) ===============
+02:02:38.473693 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:02:38.501461 version@stat F·[] S·0B[] Sc·[]
+02:02:38.501558 db@open opening
+02:02:38.501776 journal@recovery F·1
+02:02:38.503236 journal@recovery recovering @1
+02:02:38.505734 version@stat F·[] S·0B[] Sc·[]
+02:02:38.573862 db@janitor F·2 G·0
+02:02:38.573893 db@open done T·72.322125ms
+02:02:38.574756 db@close closing
+02:02:38.575547 db@close done T·784.584µs
