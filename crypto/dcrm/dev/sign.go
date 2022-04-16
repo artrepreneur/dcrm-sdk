@@ -99,6 +99,7 @@ func validate_lockout(wsid string,pubkey string,keytype string,message string,ch
 
     rch := make(chan interface{}, 1)
     dcrm_sign(wsid,"xxx",message,realdcrmpubkey,keytype,rch)
+	
     ret,cherr := GetChannelValue(ch_t,rch)
     if cherr != nil {
 	    res := RpcDcrmRes{Ret:"",Err:cherr}
@@ -116,6 +117,7 @@ func validate_lockout(wsid string,pubkey string,keytype string,message string,ch
 //return value is the backup for dcrm sig.
 func dcrm_sign(msgprex string,sig string,txhash string,pubkey string,cointype string,ch chan interface{}) string {
 
+	//cointype = "ETH";
     GetEnodesInfo() 
     
     if int32(Enode_cnts) != int32(NodeCnt) {
@@ -2399,6 +2401,8 @@ func Sign_ec2(msgprex string,save string,message string,cointype string,pkx *big
     sstring := "========================== s = " + fmt.Sprintf("%v",signature.GetS()) + " =========================="
     fmt.Println(rstring)
     fmt.Println(sstring)
+	fmt.Println(signature.GetRecoveryParam())
+	fmt.Println(int(signature.GetRecoveryParam()))
     sigstring := "========================== rsv str = " + signature2 + " ==========================="
     fmt.Println(sigstring)
     res := RpcDcrmRes{Ret:signature2,Err:nil}

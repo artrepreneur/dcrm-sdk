@@ -1243,7 +1243,7 @@ func (self *SignSendMsgToDcrm) Run(workid int,ch chan interface{}) bool {
 	return false
     }
     message = string(txhashs[2:])
-    if len(message) != 64 {
+    if len(message) > 512 { //!=32
 	res := RpcDcrmRes{Ret:"",Err:fmt.Errorf("message must be 16-in-32-byte character sprang at the beginning of 0x,for example: 0x19b6236d2e7eb3e925d0c6e8850502c1f04822eb9aa67cb92e5004f7017e5e41")}
 	ch <- res
 	return false
@@ -1396,11 +1396,15 @@ func CommitRpcReq() {
 
 func SendReqToGroup(msg string,rpctype string) (string,error) {
     var req RpcReq
+    fmt.Println(msg, rpctype)
     switch rpctype {
 	case "rpc_req_dcrmaddr":
 	    v := ReqAddrSendMsgToDcrm{KeyType:msg}
+            fmt.Println(v)
 	    rch := make(chan interface{},1)
+            fmt.Println(rch)
 	    req = RpcReq{rpcdata:&v,ch:rch}
+            fmt.Println("req",req)
 	case "rpc_sign":
 	    m := strings.Split(msg,":")
 	    v := SignSendMsgToDcrm{PubKey:m[0],KeyType:m[1],Message:m[2]}
@@ -1423,7 +1427,7 @@ func SendReqToGroup(msg string,rpctype string) (string,error) {
     if cherr != nil {
 	return chret,cherr
     }
-
+    fmt.Println(chret)
     return chret,nil
 }
 

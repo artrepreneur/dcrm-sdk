@@ -1,0 +1,42 @@
+=============== Apr 1, 2022 (EDT) ===============
+02:08:30.961179 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:08:31.009420 db@open opening
+02:08:31.011191 version@stat F·[] S·0B[] Sc·[]
+02:08:31.029495 db@janitor F·2 G·0
+02:08:31.029520 db@open done T·20.069458ms
+02:08:31.030270 db@close closing
+02:08:31.034622 db@close done T·4.349542ms
+=============== Apr 1, 2022 (EDT) ===============
+02:10:08.841160 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:10:08.845765 version@stat F·[] S·0B[] Sc·[]
+02:10:08.867265 db@open opening
+02:10:08.867800 journal@recovery F·1
+02:10:08.868244 journal@recovery recovering @1
+02:10:08.873444 version@stat F·[] S·0B[] Sc·[]
+02:10:08.984978 db@janitor F·2 G·0
+02:10:08.985046 db@open done T·117.481292ms
+02:10:09.000154 db@close closing
+02:10:09.001003 db@close done T·834.583µs
+=============== Apr 2, 2022 (EDT) ===============
+02:53:24.587574 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:53:24.595011 version@stat F·[] S·0B[] Sc·[]
+02:53:24.595438 db@open opening
+02:53:24.595974 journal@recovery F·1
+02:53:24.609563 journal@recovery recovering @2
+02:53:24.650630 memdb@flush created L0@4 N·1 S·568B "0x1..4d0,v1":"0x1..4d0,v1"
+02:53:24.659924 version@stat F·[1] S·568B[568B] Sc·[0.25]
+02:53:24.721589 db@janitor F·3 G·0
+02:53:24.721641 db@open done T·126.180708ms
+02:53:24.733047 db@close closing
+02:53:24.735245 db@close done T·2.194083ms
+=============== Apr 4, 2022 (EDT) ===============
+22:33:52.318225 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:33:52.324825 version@stat F·[1] S·568B[568B] Sc·[0.25]
+22:33:52.324941 db@open opening
+22:33:52.325127 journal@recovery F·1
+22:33:52.326173 journal@recovery recovering @5
+22:33:52.327650 version@stat F·[1] S·568B[568B] Sc·[0.25]
+22:33:52.395399 db@janitor F·3 G·0
+22:33:52.395437 db@open done T·70.488041ms
+22:33:52.405996 db@close closing
+22:33:52.406813 db@close done T·813.25µs

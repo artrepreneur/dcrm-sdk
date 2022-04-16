@@ -30,6 +30,7 @@ import (
 
 //ec2
 //msgprex = hash 
+
 func dcrm_liloreqAddress(msgprex string,keytype string,ch chan interface{}) {
 
     fmt.Println("========dcrm_liloreqAddress,Nonce =%s============",msgprex)
@@ -49,7 +50,8 @@ func dcrm_liloreqAddress(msgprex string,keytype string,ch chan interface{}) {
     }
     id := wk.id
 
-    ok := KeyGenerate_ECDSA(msgprex,ch,id,keytype)
+    //ok := KeyGenerate_ECDSA(msgprex,ch,id,keytype)
+	ok := KeyGenerate_ECDSA(msgprex,ch,id,"ETH")
     if ok == false {
 	return
     }
